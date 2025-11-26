@@ -1,0 +1,25 @@
+{
+  "name": "webhook_openai",
+  "version": "1.0.0",
+  "description": "HelloWorld",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RohitLaishram/webhook_openai.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RohitLaishram/webhook_openai/issues"
+  },
+  "homepage": "https://github.com/RohitLaishram/webhook_openai#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "openai": "^6.9.1"
+  }
+}
