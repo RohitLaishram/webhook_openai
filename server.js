@@ -1,13 +1,19 @@
 import OpenAI from "openai";
 import express from "express";
+import dotenv from "dotenv";
+dotenv.config();
 
 const app = express();
 
+console.log(process.env.OPENAI_WEBHOOK_SECRET);
 // IMPORTANT: Use raw body for signature verification
 app.use(express.text({ type: "application/json" }));
 
 // Load the webhook secret from environment variable
-const client = new OpenAI({ webhookSecret: process.env.OPENAI_WEBHOOK_SECRET });
+const client = new OpenAI({
+  apiKey: process.env.API_KEY,
+  webhookSecret: process.env.OPENAI_WEBHOOK_SECRET,
+});
 
 app.get("/test", (req, res) => {
   res.send("Server is running");
