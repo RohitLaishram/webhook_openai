@@ -16,7 +16,7 @@ const client = new OpenAI({
 });
 
 app.get("/test", (req, res) => {
-  res.send("Server is running");
+  res.send("Server is running test for");
 });
 
 // Webhook endpoint
